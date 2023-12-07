@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html{
+  overflow-x: hidden;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content_top{
+  margin-top: 100px !important;
+}
+.subcontent_top{
+  margin-top: 30px;
+}
+.headunderline{
+  text-decoration: underline;
+}
+.header{
+  background-color: #d9d9d9;
+  margin-top: 30px;
+  padding-top:45px ;
+  padding-bottom:60px ;
+}
+.headText{
+  margin-left: 210px !important;
+  letter-spacing: 15px;
+  font-weight:bold;
+}
+.contactMargin{
+  margin-left: 10px;
+}
+
+.relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+    margin: 60px 0px 0px 30%;
+    width: 220px;
+    border-radius: 100%;
+  }
+  .email{
+    text-decoration: none;
+  }
+
+  .contact{
+    margin-top: 8%;
+  }
+  .objective{
+    margin-top: 15%;
+  }
+  .vl {
+    border-left: 3px solid rgb(3, 3, 3);
+    height: 725px;
+  }
+  
+  .hr{
+    border: 2px solid rgb(3, 3, 3);
+  }
+  .headvl{
+    margin-top: 100px;
+    border-left: 3px solid rgb(3, 3, 3);
+    height: 150px;
+  }
+  .githublink{
+    text-decoration: none;
+  }
