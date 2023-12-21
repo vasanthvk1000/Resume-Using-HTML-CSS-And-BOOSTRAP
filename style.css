@@ -26,6 +26,7 @@ html{
 }
 .contactMargin{
   margin-left: 10px;
+  font-size: larger;
 }
 
 .relative {
@@ -49,18 +50,23 @@ html{
     margin-top: 15%;
   }
   .vl {
-    border-left: 3px solid rgb(3, 3, 3);
-    height: 725px;
+    border-left: 3px solid #d9d9d9;
+    height: 99%;
   }
   
   .hr{
-    border: 2px solid rgb(3, 3, 3);
+    border: 2px solid #d9d9d9;
   }
   .headvl{
     margin-top: 100px;
-    border-left: 3px solid rgb(3, 3, 3);
-    height: 150px;
+    border-left: 3px solid #d9d9d9;
+    height: 180px;
   }
   .githublink{
     text-decoration: none;
+  }
+  
+  .objectiveContent{
+    line-height: 180%;
+    font-size: larger;
   }
