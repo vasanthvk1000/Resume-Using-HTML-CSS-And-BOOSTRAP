@@ -7,52 +7,122 @@
   <script src="https://kit.fontawesome.com/13d49d66e6.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-  <body>
+
+<script>
+
+let users = {
+
+"data":[{
+    "name": "vasantha kumar",
+    "photo": "../assets/img.jpeg",
+            "pnno": 9080106254,
+            "email": "vasanthakumarvk1000@gmail.com",
+            "place": "Tiruppur, Tamilnadu-641666"
+        
+    ,
+
+
+    "objective": "A self-motivated FullStack Developer. Passionate and hardworking with penchant for meeting deadlines. Interested in exploring things, learning many new things & in role with company",
+    "certification": ["I did an internship at Elancier Solutions With certificate", 
+    "Completed Basics in MS - Office, Tally ERP-9.3, Photoshop andCorelDraw in PGDCA Course"
+    ],
+
+
+                "degree": "MASTER OF COMPUTER APPLICATION (2022)",
+                "college": "Nehru College of Management, Coimbatore",
+                "cgpa": 7.93
+            
+        ,
+    "achievements":
+        [
+            "Class First Mark and one Centum in School Studies",
+            "Participated in the Quiz on Python programming language"
+        ],
+    "tech_skills":
+        [
+            "HTML/CSS", "Bootstrap", "Java Script", "React Js", "Git & Github", "VS Code", "Java -OOPS", "jAVA -DSA", "ES6", "Mysql"],
+    "soft_skills":
+        [
+            "Adaptability", "Time Management", "Teamwork", "Research"
+        ],
+    
+                "companyname": "Elancier Solutions In Project Intern",
+                "exp": [
+                    "Designed and developed a website according to client requirement",
+                    "Collaborated with Senior Software Developer"
+                ]
+            ,
+    
+                "date": "17/01/2000",
+                "genter": "Male",
+                "fathername": "Chandran T",
+                "language": "Tamil, English",
+                "status": " Unmarried",
+                "nationality": "Indian"
+            ,
+
+  
+                "url": "https://github.com/vasanthvk1000?tab=repositories",
+                "pojectnames": [
+                    "Responsive Website",
+                    "Quiz Application",
+                    "Weather Application"
+                ]
+         
+}
+]
+}
+
+function loaddata(){
+  let htmlContent = "";
+  users.data.forEach((user,index) => {
+    htmlContent=`${htmlContent}
     <div class="header heacontainer-fluid relative">
       <div class="d-flex">
         <div class="">
-          <h1 class="container headText">VASANTHA KUMAR</h1>
+          <h1 class="container headText">${user.name}</h1>
         </div>
         <div class="">
-          <img class="absolute" src="../assets/img.jpeg" alt="" srcset="">
+          <img class="absolute" src="${user.photo}" alt="" srcset="">
         </div>
       </div>
     </div>
-    <!-----contact and objective------->
+
+
+
     <div class="container">
       <div class="row content_top">
         <div class="col-md-5">
           <div class="contact" id="contact">
             <h3 class="fw-bold contentHeading headunderline">C O N T A C T</h3>
-           <div class="d-flex mt-4"><i class="mt-1 fa-sharp fa-solid fa-phone"></i> <h6 class="contactMargin fw-bold">9080106254</h6></i></div>
-           <div class="d-flex mt-3"><i class="mt-1 fa-solid fa-envelope"></i> <h6 class="contactMargin fw-bold">vasanthakumarvk1000@gmail.com</h6></div>
-           <div class="d-flex mt-3"><i class=" mt-1 fa-solid fa-location-dot"></i><h6 class="contactMargin fw-bold">Tiruppur, Tamilnadu-641666</h6></div>
+           <div class="d-flex mt-4"><i class="mt-1 fa-sharp fa-solid fa-phone"></i> <h6 class="contactMargin fw-bold">${user.pnno}</h6></i></div>
+           <div class="d-flex mt-3"><i class="mt-1 fa-solid fa-envelope"></i> <h6 class="contactMargin fw-bold">${user.email}</h6></div>
+           <div class="d-flex mt-3"><i class=" mt-1 fa-solid fa-location-dot"></i><h6 class="contactMargin fw-bold">${user.place}</h6></div>
          
           </div>
         </div>
         <div class="col-md-1">
-          <div class="headvl"></div>
+          
         </div>
       
         <div class="col-md-6">
           <div class="objective" id="objective">
             <h3 class="fw-bold contentHeading headunderline">O B J E C T I V E</h3>
-            <p  class="mt-3 fw-bold objectiveContent">A self-motivated FullStack Developer. Passionate and hardworking with penchant for meeting deadlines.
-              Interested in exploring things, learning many new things & in role with company</p>
+            <p  class="mt-3 fw-bold objectiveContent">${user.objective}</p>
           </div>
         </div>
       </div>
-  
-    <div class="container">
-      <div class="hr"></div>
-    </div>
-    <!---------------------------------------------------------------------------------------->
-    <div class="row">
-      <div class="container"></div>
-      <div class="col-md-5">
-        <div class="certification subcontent_top" id="certification">
+     
+
+
+
+      <div class="row">
+    <div class="col-md-5">
+
+
+ <div class="certification subcontent_top" id="certification">
           <h3 class="fw-bold contentHeading headunderline">C E R T I F I C A T I O N</h3>
           <ul class="mt-3 objectiveContent fw-bold">
             <li>I did an internship at Elancier Solutions
@@ -62,109 +132,62 @@
               in PGDCA Course</li>
           </ul>
         </div>
+      
 
-        <div class="achievements subcontent_top" id="achievements">
-          <h3 class="fw-bold contentHeading headunderline">A C H I E V E M E N T S </h3>
-          <ul class="mt-3 objectiveContent fw-bold">
-            <li>Class First Mark and one Centum in School Studies</li>
-            <li>Participated in the Quiz on Python programming language</li>
-          </ul>
-        </div>
-
-        <div class="softSkills subcontent_top" id="softSkills">
-          <h3 class="fw-bold contentHeading headunderline">S O F T S K I L L S</h3>
-          <ul class="mt-3 objectiveContent fw-bold">
-            <li>Adaptability</li>
-            <li>Time Management</li>
-            <li>Teamwork</li>
-            <li>Research</li>
-          </ul>
-        </div>
-  
-
-      <div class="personalDetails mb-3 subcontent_top" id="personalDetails">
-        <h3 class="fw-bold contentHeading headunderline">P E R S O N A L D E T A I L S</h3>
-        <div class="mt-3">
-        <h5 class="objectiveContent fw-bold">Date of Birth : 17/01/2000</h5>
-        <h5 class="objectiveContent fw-bold">Gender : Male </h5>
-        <h5 class="objectiveContent fw-bold">Father’s Name : Chandran T </h5>
-        <h5 class="objectiveContent fw-bold">Language : Tamil, English </h5>
-        <h5 class="objectiveContent fw-bold">Civil Status. : Unmarried </h5>
-        <h5 class="objectiveContent fw-bold">Nationality : Indian</h5>
-        </div>
-      </div>
     </div>
 
-<!---------------------------------------------------------------------------------------------------------->
-<div class="col-md-1">
-  <div class="vl"></div>
+    <div class="col-md-1">
+
+    </div>
+<div class="col-md-6">
+    
 </div>
-<!----------------------------------------------------------------------------------------------------------->
 
-      <div class="col-md-6">
-        <div class="education subcontent_top" id="education">
-          <h3 class="fw-bold contentHeading headunderline mb-3">E D U C A T I O N</h3>
-          <h6 class="objectiveContent fw-bold"> MASTER OF COMPUTER APPLICATION (2022)</h6>
-          <h6 class="objectiveContent fw-bold">Nehru College of Management, Coimbatore </h6>
-          <h6 class="objectiveContent fw-bold">CGPA : 7.93</h6>
-        </div>
+</div>
 
-        <div class="skills subcontent_top" id="skills">
-          <h3 class="fw-bold contentHeading headunderline mb-3">S K I L L S</h3>
-          <div class="row fw-bold">
-            <div class="col-md-4">
-              <ul class="objectiveContent fw-bold">
-                <li>HTML/CSS </li>
-                <li>Bootstrap</li>
-                <li>Java Script
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <ul class="objectiveContent fw-bold">
-                <li>React Js</li>
-                <li>Git & Github </li>
-                <li>VS Code</li>
-              </ul>
-            </div>
-            <div class="col-md-4"></div>
-          </div>
-        </div>
 
-        <div class="internship subcontent_top" id="integrity">
-          <h3 class="fw-bold contentHeading headunderline mb-2">I N T E R N S H I P</h3>
-          <h5 class="mt-2 objectiveContent fw-bold">Elancier Solutions In Project Intern</h5>
-          <ul class="objectiveContent fw-bold">
-            <li>Designed and developed a website according to client requirement</li>
-            <li>Collaborated with Senior Software Developer</li>
-          </ul>
-        </div>
 
-        <div class="Projects subcontent_top" id="Projects" >
-          <h3 class="fw-bold contentHeading headunderline mb-">P R O J E C T S</h3>
-          <h6 class="objectiveContent fw-bold"><a class="githublink"
-              href="https://github.com/vasanthvk1000?tab=repositories">https://github.com/vasanthvk1000?tab=repositories</a>
-          </h6>
-          <ul class="objectiveContent">
-            <li>
-              <h5 class="fw-bold">Responsive Website</h5>
-            </li>
-            <li>
-              <h5 class="fw-bold">Quiz Application</h5>
-            </li>
-            <li>
-              <h5 class="fw-bold">Weather Application</h5>
-            </li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
 
-  </div>
+
+
+
+
+</div>
+    `
+  } )
+
+
+
+
+
+
+   $("#callid").html(htmlContent);
+}
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+  <body>
+    <div class="callid" id="callid">
+   
+    <!-----contact and objective------->
+    
+</div>
 
     <!---------------------------------------------------------------------------------------->
-    
+    <script>
+      loaddata();
+  </script>
+
   </body>
 
 </html>

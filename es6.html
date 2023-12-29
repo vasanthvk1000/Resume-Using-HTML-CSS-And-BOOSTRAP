@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+//     function testing(a, b){
+//         console.log("a : " + a)
+//         console.log("b : " + b)
+//         let c = a+b;//logical implemeation
+
+//         return c;
+//     }
+// let val = testing(19,35)
+// alert("value return :" +val )
+
+//es6- arrow function
+
+// let val1 = (a,b) => {
+//     console.log("a : " + a)
+//   console.log("b : " + b)
+//   let c = a+b;
+//   return c;
+// }
+// alert("value return :" +val1(10,10) )
+
+
+//add or even num
+
+// const oddEven = (n) => { return n%2 ===0}
+//    alert("oddoreven number return : " + oddEven(11));
+
+
+//spread operator
+
+
+
+// let arr =[1,2,3,4,5,6,7]
+// let arr1 =[8,9,10,11,12]
+// console.log(arr + arr1)
+// let mergearr = [...arr,...arr1]
+// console.log(...arr)
+// console.log(...mergearr)
+
+
+//another example spred oparor
+
+// const add  = (a,b,c,d) => {return a+b+c+d}
+// console.log("normal add: " + add(2,4,6,8,))
+
+
+
+// const spreadoperator = (...a)=>{
+//     let c=0;
+//     for(val of a){
+//         c = c + val;
+//     }
+
+//or
+//a.foreach(val => {c = c+val})
+
+//     return c;
+// }
+// console.log("spread operator :" + spreadoperator(2,3,4,5,6))
+
+
+const sub = (a,b) =>{return a-b}
+console.log("sub : " + sub(10,5))
+
+const mul = (a,b) =>{return a*b}
+console.log("mul : " + mul(10,5))
+
+const div = (a,b) =>{return a/b}
+console.log("div : " + sub(10,5))
+
+const mod = (a,b) =>{return a%b}
+console.log("mod : " + sub(10,5))
+
+
+
+
+let arr =[1,2]
+ let arr1 =[8,9]
+
+const spreadsub = (...a) =>{
+    let c =0;
+    a.forEach(val => {c = c - val })
+    return c;
+}
+
+console.log("spread Sub :" + spreadsub(1,2))
+console.log("spread Sub :" + spreadsub(...arr,...arr1))
+
+
+
+
+
+
+const spreadmul = (...a) =>{
+    let c =0;
+    a.forEach(val => {c = c * val })
+    return c;
+}
+
+console.log("spread mul :" + spreadmul(1,2))
+console.log("spread mul :" + spreadmul(...arr,...arr1))
+
+
+
+const spreaddiv = (...a) =>{
+    let c =0;
+    a.forEach(val => {c = c / val })
+    return c;
+}
+
+console.log("spread div :" + spreaddiv(1,2))
+console.log("spread div :" + spreaddiv(...arr,...arr1))
+
+
+
+const spreadmod = (...a) =>{
+    let c =0;
+    a.forEach(val => {c = c % val })
+    return c;
+}
+
+console.log("spread mod :" + spreadmod(1,2))
+console.log("spread mod :" + spreadmod(...arr,...arr1))
+
+
+
+</script>
+
+
+<body>
+    
+</body>
+</html>

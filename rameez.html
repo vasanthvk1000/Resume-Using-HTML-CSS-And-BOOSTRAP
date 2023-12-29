@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Rameez's Resume</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Resume1.css">
+</head>
+<body>
+    <script>
+        function loadcontent(){
+            let json = {
+            "resume": {
+                "profile": {
+                "image": "Rameezpic.jpg",
+                "info": "d.o.b",
+                "languages": [
+                    { "language": "English", "progress": 60 },
+                    { "language": "Tamil", "progress": 80 }
+                ]
+                },
+                "skills": [
+                { "skill": "HTML", "rating": 0.8 },
+                { "skill": "CSS", "rating": 0.9 },
+                { "skill": "JQUERY", "rating": 0.7 },
+                { "skill": "JAVASCRIPT", "rating": 0.6 }
+                ],
+                "interests": ["Sports", "Drive"]
+            },
+            "personalInfo": {
+                "first_name": "Mohamed",
+                "last_name": "Rameez",
+                "title": "Full stack developer"
+            },
+            "workExperience": [
+                {
+                "period": "2023-2024",
+                "company": "Amazon",
+                "position": "CSA",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                }
+            ],
+            "education": [
+                {
+                "period": "2019-2023",
+                "institution": "Dr. N.G.P. Arts and Science College",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                }
+            ],
+            "achievements": [
+                {
+                "category": "Collage",
+                "name": "IT EXPLORE",
+                "description": "Completed Certificate Course in Advanced Certified Secure Computer User Conducted by XPLORE IT CORP."
+                }
+            ]
+            }
+        
+                
+            let htmlcontent = "";
+                
+            htmlcontent = `<div class="resume-main">
+                <div class="left-box">
+                    <br><br>
+                    <div class="profile">
+                        <img src="${json.resume.profile.image}">
+                    </div>
+                    <div class="content-box">
+                    <h2>Profile ${json.resume.profile.info}</h2>
+                    <hr class="hr1">
+                    <p class="p1"> </p>
+
+                    <h3>Language:</h3>`
+                    json.resume.profile.languages.forEach((lang, i) => {
+                        if (i%2 == 0)
+                            htmlcontent = `${htmlcontent}	<p class="p2">${lang.language}</p><div id="progress" style="--wid:${lang.progress}%;"></div>`
+                        else
+                            htmlcontent = `${htmlcontent}	<p class="p2">${lang.language}</p><div id="progress1" style="--wid:${lang.progress}%;"></div>`
+
+
+                    });
+		
+            htmlcontent = `${htmlcontent}	<br><br>
+            <h2>My Skills</h2>
+            <hr class="hr1">
+            <br>`
+
+            json.resume.skills.forEach(s => {
+                htmlcontent = `${htmlcontent}
+            <div class="col-div-6"><p class="p2">${s.skill}</p></div>
+            <div class="col-div-6">
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle"></i>
+                <i class="fa fa-circle circle1"></i>
+                <i class="fa fa-circle circle1"></i>
+            </div>
+                <div class="clearfix"></div>`
+            })
+        
+            
+
+           
+            htmlcontent = `${htmlcontent}
+                        <div class="clearfix"></div>
+                        <br>
+                        <h2>interests</h2>
+                        <hr class="hr1">
+                        <br>`
+            json.resume.interests.forEach(interest => {
+                htmlcontent = `${htmlcontent} 
+                        <div class="col-div-3 col3">
+                            <i class="fa fa-futbol-o in">${interest}</i>
+                            <span class="inp"></span>
+                        </div>`
+            })
+            
+            
+            htmlcontent = `${htmlcontent} 
+   
+                    </div>
+                </div>
+
+                <div class="right-box">
+                    <h1>
+                        Mohamed<br>
+                        <span>Rameez</span>
+                    </h1>
+                    <p class="p3">Full stack developer</p>
+
+                    <br>	
+                    <h2 class="heading">Work Experience</h2>
+                    <hr class="hr2">
+                    <br>
+                    <div class="col-div-4">
+                        <p class="p5">2023-2024</p>
+                        <span class="span1">amazon</span>
+                    </div>
+                    <div class="col-div-8">
+                        <p class="p5">CSA</p>
+                        <span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <br>	
+                    <h2 class="heading">My Education</h2>
+                    <hr class="hr2">
+                    <br>
+                    <div class="col-div-4">
+                        <p class="p5">2019-2023</p>
+                    
+                    </div>
+
+                    <div class="col-div-8">
+                        <p class="p5">Dr. N.G.P. Arts and Science College</p>
+                        <span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                    </div>
+                
+
+                    <div class="clearfix"></div>
+                    <br>
+                    <h2 class="heading">ACHIVEMENT</h2>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="col-div-4">
+                        <p class="p5">COLLAGE</p>
+                        
+                    </div>
+                    <div class="col-div-8">
+                        <p class="p5">IT EXPLORE</p>
+                        <span class="span1">Completed Certificate Course in Advanced Certified Secure Computer User Conducted by 
+                            XPLORE IT CORP.</span>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+
+            </div>`
+
+
+    
+        return htmlcontent;
+   
+    }
+    </script>
+
+    <div class="resume"></div>
+
+     <script>
+    $(".resume").html(loadcontent());
+    console.log(loadcontent());
+
+
+    </script>
+
+</body>
+</html>

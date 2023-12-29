@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let map = new Map([
+      ["name", "ranjith"],
+      ["age", "80"],
+      ["gender", "male"],
+    ]);
+    console.log(`name ${map.get("name")}`);
+    console.log(`age ${map.get("age")}  `);
+    console.log(`gender ${map.get("gender")}`);
+    //json
+    let json = { name: "ranjith", age: 80, gender: "male" };
+
+    let { name, age, gender } = json;
+    
+      console.log(`type1 name ${json.name} age ${json.age} gender ${json.gender}`);
+      console.log(`type2 name ${name} age ${age} gender ${json.gender}`);
+  </script>
+<body>
+    
+</body>
+</html>

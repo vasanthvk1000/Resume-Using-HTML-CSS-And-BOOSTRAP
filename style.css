@@ -35,7 +35,7 @@ html{
   
   .absolute {
     position: absolute;
-    margin: 60px 0px 0px 30%;
+    margin: 60px 0px 0px 10%;
     width: 220px;
     border-radius: 100%;
   }
@@ -49,19 +49,19 @@ html{
   .objective{
     margin-top: 15%;
   }
-  .vl {
+  /* .vl {
     border-left: 3px solid #d9d9d9;
     height: 99%;
   }
-  
-  .hr{
+   */
+  /* .hr{
     border: 2px solid #d9d9d9;
-  }
-  .headvl{
+  } */
+  /* .headvl{
     margin-top: 100px;
     border-left: 3px solid #d9d9d9;
     height: 180px;
-  }
+  } */
   .githublink{
     text-decoration: none;
   }
