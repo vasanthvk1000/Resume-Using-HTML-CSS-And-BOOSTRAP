@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  initial-scale="1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            constructor( name, age, gender){
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+
+            }
+           
+        }
+
+        let person  = new Person("vasanthakumar", 23, "male");
+       console.log(person.name);
+       console.log(person.age);
+       console.log(person.gender);
+
+
+
+        class Person1{
+            constructor(...params){
+                this.params = params;
+
+
+            }
+           
+        }
+let person1 = new Person1("vasanthakumar", 23, "male","tn")     
+console.log(Person1.params);
+
+
+let json1 = [{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"}
+
+]
+let json2 = [{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"},
+{"name":"vasanthakumar","age":23,"gender":"male","palce":"tn"}
+
+]
+
+let person2 = new Person1(...json1, ...json2, ...json1,...json2, ...json1, ...json2);
+
+console.log(person1.params);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
